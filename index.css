@@ -387,3 +387,27 @@ textarea:focus {
     height: inherit;
     width: 50%;
 }
+.fade-in-out{
+    color: burlywood;
+    font-size: 18px;
+    letter-spacing: 1.8px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 10px;
+    animation: fade-in-out 4s normal;
+}
+
+@keyframes fade-in-out
+{
+  0%{
+    opacity:0;
+  }
+  50%
+  {
+    opacity:1;
+  }
+  100%
+  {
+    opacity:1;
+  }
+}
