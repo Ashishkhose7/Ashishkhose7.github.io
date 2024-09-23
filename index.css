@@ -67,6 +67,7 @@ section:nth-child(2n + 1) {
     background-color: #fff;
 }
 .section-heading {
+    text-align: center;
     width: auto;
     padding: 20px 10px 10px;
     font-weight: 400;
@@ -136,6 +137,12 @@ section:nth-child(2n + 1) {
     left: 5%;
     text-align: right;
 }
+@media screen and (max-width: 480px) {
+    .timeline-box {
+        width: 100%;
+        left: 0%;
+    }
+}
 .timeline-box::after {
     content: "";
     position: absolute;
@@ -154,6 +161,14 @@ section:nth-child(2n + 1) {
 }
 .timeline-box:nth-child(2n)::after {
     left: -8.5%;
+}
+@media screen and (max-width: 480px) {
+    .timeline-box::after {
+        display: none;
+    }
+    .timeline-box:nth-child(2n) {
+        left: 0%;
+    }
 }
 .timeline-container {
     padding: 8px;
@@ -175,6 +190,7 @@ section:nth-child(2n + 1) {
     height: 68%;
     color: #433e3f;
 }
+
 #timeline-divider i {
     transform: rotate(90deg);
     margin-top: -35px;
@@ -188,7 +204,7 @@ section:nth-child(2n + 1) {
     margin: 5px 0 0;
     color: #eb822d;
     font-weight: 400;
-    font-size: 1.2rem;
+    font-size: 14px;
 }
 .experience-duration {
     color: #9e9b9b;
@@ -215,9 +231,9 @@ section:nth-child(2n + 1) {
     justify-content: space-around;
 }
 .portfolio-image-container {
-    max-width: 300px;
+    max-width: 250px;
     overflow: hidden;
-    margin: 30px;
+    margin-bottom: 30px;
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
@@ -235,10 +251,16 @@ section:nth-child(2n + 1) {
     width: 100%;
     color: transparent;
     text-align: center;
-    padding: 10px;
+    font-size: 24px;
+    color: navy;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.portfolio-details p{
+    margin: 0;
+    padding: 0;
+    display: inline-block;
 }
 .project-link {
     text-decoration: none;
@@ -274,6 +296,7 @@ section:nth-child(2n + 1) {
 #my-details-container {
     width: 35%;
     margin-left: 6%;
+    overflow-wrap: break-word;
 }
 #my-details-container h3 {
     color: #fff;
@@ -349,9 +372,10 @@ textarea:focus {
 }
 .m0 {
     margin: 0;
+    margin-top: 3px;
 }
 .mb75px {
-    margin-bottom: 68px;
+    margin-bottom: 30px;
 }
 .mb50px {
     margin-bottom: 50px;
@@ -396,7 +420,45 @@ textarea:focus {
     margin-bottom: 10px;
 /*     animation: fade-in-out 4s normal; */
 }
-
+@media screen and (max-width: 480px) {
+    #timeline-divider {
+       display: none;
+    }
+    .timeline-logo > img{
+        width: 80%;
+    }
+    .experience-designation{
+        font-size: 18px;
+    }
+    .experience-company-name{
+        font-size: 10px;
+    }
+    .experience-duration{
+        font-size: 12px;
+    }
+    .experience-description{
+        letter-spacing: 0.2px;
+        font-size: 12px;
+    }
+    .section-heading span{
+        font-size: 35px;
+    }
+    #contact-container{
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+    #my-details-container{
+        width: 90%;
+        overflow-wrap: break-word;
+    }
+    #contact-form{
+        margin: auto;
+    }
+    #contact-form-container{
+        width: 90%;
+    }
+}
 @keyframes fade-in-out
 {
   0%{
