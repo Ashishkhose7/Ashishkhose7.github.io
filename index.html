@@ -1,523 +1,1051 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <meta name="description" content="Portfolio of Ashish Khose, a skilled front-end developer specializing in creating responsive and interactive web applications using HTML, CSS, and JavaScript with frameworks like React, Vue and Next.js">
-    <meta name="keywords" content="Portfolio, Frontend Developer, Ashish Khose, Web Developer, Website, React, Vue, Next.js, Portfolio, HTML, CSS, JavaScript">
-    <meta name="author" content="Ashish Khose">
-    <meta property="og:title" content="Ashish Khose | Front-End Developer">
-    <meta property="og:description" content="Explore the portfolio of Ashish Khose, showcasing projects and skills in front-end development.">
-    <meta property="og:image" content="https://i.ibb.co/rMgzWRP/Screenshot-63.png">
-    <meta property="og:url" content="https://ashishkhose7.github.io/">
-    <meta property="og:type" content="website">
-    <title>Ashish Khose - Frontend Developer</title>
-    <script
-      src="https://kit.fontawesome.com/b3348ae33f.js"
-      crossorigin="anonymous"
-    ></script>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Ashish Khose, an AI-focused front-end developer building responsive, accessible web experiences with React, Next.js, Nuxt.js, Tailwind CSS, and Material UI, plus SEO, analytics, and growth-focused UX." />
+  <meta name="author" content="Ashish Khose" />
+  <meta property="og:title" content="Ashish Khose | Front-End Developer" />
+  <meta property="og:description" content="Explore the portfolio of Ashish Khose, showcasing projects and skills in front-end development." />
+  <meta property="og:image" content="https://i.ibb.co/rMgzWRP/Screenshot-63.png" />
+  <meta property="og:url" content="https://ashishkhose7.github.io/" />
+  <meta property="og:type" content="website" />
+  <title>Ashish Khose — Frontend Developer</title>
 
-    <link rel="stylesheet" href="index.css" />
-    <link
-      rel="shortcut icon"
-      href="./imgs/domain.png"
-      type="image/x-icon"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-  </head>
+  <link rel="shortcut icon" href="./imgs/domain.png" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round:wght@300;400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-  <body>
-    <header id="body-header">
-      <nav>
-        <ul class="horizontal-list text-center nav-menu">
-          <li><a href="#">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/b3348ae33f.js" crossorigin="anonymous"></script>
 
-      <div id="name-social-container">
-        <div class="text-center">
-          <h1 id="my-name">Ashish Khose</h1>
-          <p class="animate__animated animate__flash fade-in-out">
-            Frontend Developer
-          </p>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Varela Round', 'system-ui', 'sans-serif'],
+            display: ['Varela Round', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- No-JS fallback: reveal all content if JavaScript is disabled -->
+  <noscript>
+    <style>
+      .reveal { opacity: 1 !important; transform: none !important; }
+    </style>
+  </noscript>
+
+  <style>
+    /* ── Custom Scrollbar ───────────────────────── */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #020617; }
+    ::-webkit-scrollbar-thumb { background: #6366f1; border-radius: 99px; }
+    ::-webkit-scrollbar-thumb:hover { background: #818cf8; }
+
+    /* ── Focus Visible (WCAG AA) ────────────────── */
+    :focus-visible {
+      outline: 3px solid #60a5fa;
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+    :focus:not(:focus-visible) {
+      outline: none;
+    }
+
+    /* ── Animated Gradient Blobs ────────────────── */
+    @keyframes blob {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      25%      { transform: translate(30px, -50px) scale(1.08); }
+      50%      { transform: translate(-20px, 20px) scale(0.95); }
+      75%      { transform: translate(20px, 40px) scale(1.05); }
+    }
+    .animate-blob { animation: blob 8s ease-in-out infinite; }
+    .animation-delay-2000 { animation-delay: 2s; }
+    .animation-delay-4000 { animation-delay: 4s; }
+
+    /* ── Typing Cursor Blink ───────────────────── */
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+    .cursor-blink { animation: blink .75s step-end infinite; }
+
+    /* ── Scroll-Triggered Reveal ───────────────── */
+    .reveal {
+      opacity: 0;
+      transition: opacity .7s cubic-bezier(.4,0,.2,1), transform .7s cubic-bezier(.4,0,.2,1);
+    }
+    .reveal.from-bottom  { transform: translateY(50px); }
+    .reveal.from-left    { transform: translateX(-50px); }
+    .reveal.from-right   { transform: translateX(50px); }
+    .reveal.from-scale   { transform: scale(.88); }
+    .reveal.visible {
+      opacity: 1;
+      transform: translate(0) scale(1);
+    }
+
+    /* ── Nav Link Underline ────────────────────── */
+    .nav-link { position: relative; }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px; left: 0;
+      width: 0; height: 2px;
+      background: linear-gradient(90deg,#3b82f6,#8b5cf6);
+      border-radius: 999px;
+      transition: width .3s ease;
+    }
+    .nav-link:hover::after,
+    .nav-link.active::after { width: 100%; }
+
+    /* ── Dot Grid Pattern ──────────────────────── */
+    .dot-grid {
+      background-image: radial-gradient(circle, currentColor .6px, transparent .6px);
+      background-size: 28px 28px;
+    }
+
+    /* ── Timeline Gradient Line ────────────────── */
+    .timeline-line-gradient {
+      background: linear-gradient(180deg,#3b82f6,#8b5cf6,#ec4899,#8b5cf6);
+    }
+
+    /* ── Portfolio card keyboard focus support ─── */
+    .portfolio-card:focus-within .portfolio-overlay {
+      opacity: 1;
+    }
+    .portfolio-card:focus-within .portfolio-overlay-content {
+      transform: translateY(0);
+    }
+    .portfolio-card:focus-within img {
+      transform: scale(1.1);
+    }
+
+    /* ── Reduced Motion (WCAG) ─────────────────── */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-slate-950 text-slate-300 font-sans overflow-x-hidden">
+
+  <!-- ═══════ SKIP LINK (WCAG AA) ═══════ -->
+  <a href="#main-content"
+     class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-6 focus:py-3 focus:bg-blue-600 focus:text-white focus:rounded-lg focus:text-sm focus:font-semibold focus:shadow-lg">
+    Skip to main content
+  </a>
+
+  <!-- ═══════════════ NAVIGATION ═══════════════ -->
+  <nav id="navbar" aria-label="Primary navigation"
+       class="fixed top-0 inset-x-0 z-50 transition-all duration-500">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center h-16 relative">
+
+      <!-- Desktop Links -->
+      <div class="hidden md:flex items-center gap-8" role="menubar">
+        <a href="#hero"       class="nav-link text-sm font-medium text-slate-300 hover:text-blue-400 transition">Home</a>
+        <a href="#about"      class="nav-link text-sm font-medium text-slate-300 hover:text-blue-400 transition">About</a>
+        <a href="#skills"     class="nav-link text-sm font-medium text-slate-300 hover:text-blue-400 transition">Skills</a>
+        <a href="#experience" class="nav-link text-sm font-medium text-slate-300 hover:text-blue-400 transition">Experience</a>
+        <a href="#portfolio"  class="nav-link text-sm font-medium text-slate-300 hover:text-blue-400 transition">Portfolio</a>
+        <a href="#contact"    class="nav-link text-sm font-medium text-slate-300 hover:text-blue-400 transition">Contact</a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn"
+              class="md:hidden w-11 h-11 rounded-xl flex items-center justify-center bg-slate-800 text-slate-300 hover:bg-slate-700 transition absolute right-4 sm:right-6 lg:right-8"
+              aria-label="Toggle navigation menu"
+              aria-expanded="false"
+              aria-controls="mobile-menu">
+        <i class="fas fa-bars text-lg" id="menu-icon" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 backdrop-blur-xl border-t border-slate-800" role="menu">
+      <div class="flex flex-col items-center gap-5 py-8">
+        <a href="#hero"       class="mobile-link text-base font-medium text-slate-200 hover:text-blue-400 transition" role="menuitem">Home</a>
+        <a href="#about"      class="mobile-link text-base font-medium text-slate-200 hover:text-blue-400 transition" role="menuitem">About</a>
+        <a href="#skills"     class="mobile-link text-base font-medium text-slate-200 hover:text-blue-400 transition" role="menuitem">Skills</a>
+        <a href="#experience" class="mobile-link text-base font-medium text-slate-200 hover:text-blue-400 transition" role="menuitem">Experience</a>
+        <a href="#portfolio"  class="mobile-link text-base font-medium text-slate-200 hover:text-blue-400 transition" role="menuitem">Portfolio</a>
+        <a href="#contact"    class="mobile-link text-base font-medium text-slate-200 hover:text-blue-400 transition" role="menuitem">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════ HERO ═══════════════ -->
+  <header id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <!-- Animated Background Blobs -->
+    <div class="absolute inset-0 -z-10" aria-hidden="true">
+      <div class="absolute top-1/4 left-[10%] w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 bg-blue-600/15 rounded-full blur-3xl animate-blob"></div>
+      <div class="absolute top-[15%] right-[10%] w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 bg-purple-600/15 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
+      <div class="absolute bottom-[15%] left-1/2 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 bg-cyan-500/10 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
+    </div>
+    <!-- Dot Grid -->
+    <div class="absolute inset-0 dot-grid text-slate-500/5 -z-10" aria-hidden="true"></div>
+
+    <div class="relative text-center px-4 w-full max-w-3xl mx-auto">
+      <p class="text-sm md:text-base font-semibold tracking-[0.25em] uppercase text-blue-400 mb-5 reveal from-bottom visible" style="transition-delay:.1s">
+        Hello, I'm
+      </p>
+
+      <h1 class="text-[2.75rem] sm:text-6xl md:text-7xl lg:text-8xl font-extrabold font-display tracking-tight mb-5 bg-gradient-to-r from-white via-blue-300 to-purple-400 bg-clip-text text-transparent leading-[1.1] reveal from-bottom visible" style="transition-delay:.25s">
+        Ashish Khose
+      </h1>
+
+      <div class="text-lg md:text-2xl text-slate-400 mb-10 h-8 reveal from-bottom visible" style="transition-delay:.4s" aria-live="polite" aria-label="Role description">
+        <span id="typed-text"></span><span class="cursor-blink text-blue-400 font-light" aria-hidden="true">|</span>
+      </div>
+
+      <!-- Social Icons -->
+      <div class="flex justify-center gap-3 sm:gap-4 mb-10 reveal from-bottom visible" style="transition-delay:.55s">
+        <a href="https://www.linkedin.com/in/ashishkhose7" target="_blank" rel="noopener noreferrer"
+           aria-label="Visit LinkedIn profile"
+           class="w-12 h-12 rounded-full bg-slate-800/70 flex items-center justify-center text-slate-300 hover:bg-blue-600 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-blue-600/25">
+          <i class="fab fa-linkedin-in text-lg" aria-hidden="true"></i>
+        </a>
+        <a href="https://github.com/Ashishkhose7" target="_blank" rel="noopener noreferrer"
+           aria-label="Visit GitHub profile"
+           class="w-12 h-12 rounded-full bg-slate-800/70 flex items-center justify-center text-slate-300 hover:bg-white hover:text-slate-900 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-white/10">
+          <i class="fa-brands fa-github text-lg" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.instagram.com/ashish__khose" target="_blank" rel="noopener noreferrer"
+           aria-label="Visit Instagram profile"
+           class="w-12 h-12 rounded-full bg-slate-800/70 flex items-center justify-center text-slate-300 hover:bg-gradient-to-br hover:from-purple-500 hover:to-pink-500 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-pink-500/25">
+          <i class="fa-brands fa-instagram text-lg" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.facebook.com/ashishkhose07" target="_blank" rel="noopener noreferrer"
+           aria-label="Visit Facebook profile"
+           class="w-12 h-12 rounded-full bg-slate-800/70 flex items-center justify-center text-slate-300 hover:bg-blue-700 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-blue-700/25">
+          <i class="fab fa-facebook-f text-lg" aria-hidden="true"></i>
+        </a>
+      </div>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row justify-center gap-4 reveal from-bottom visible" style="transition-delay:.7s">
+        <a href="#portfolio"
+           class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold text-sm shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/35 hover:-translate-y-0.5 transition-all duration-300">
+          View My Work <i class="fas fa-arrow-right text-xs" aria-hidden="true"></i>
+        </a>
+        <a href="#contact"
+           class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full border-2 border-slate-700 text-slate-200 font-semibold text-sm hover:border-blue-500 hover:text-blue-400 hover:-translate-y-0.5 transition-all duration-300">
+          Contact Me
+        </a>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-slate-500 animate-bounce" aria-hidden="true">
+      <span class="text-xs tracking-widest uppercase">Scroll</span>
+      <i class="fas fa-chevron-down text-sm"></i>
+    </div>
+  </header>
+
+  <!-- ═══════════════ MAIN CONTENT ═══════════════ -->
+  <main id="main-content">
+
+    <!-- ────────── ABOUT ────────── -->
+    <section id="about" aria-labelledby="about-heading" class="py-20 md:py-28 bg-slate-950">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-12 reveal from-bottom">
+          <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-semibold tracking-wider uppercase mb-4">
+            <i class="fa-solid fa-circle-info" aria-hidden="true"></i> About Me
+          </span>
+          <h2 id="about-heading" class="text-3xl md:text-4xl font-bold font-display text-white">
+            Get to know me
+          </h2>
         </div>
 
-        <div>
-          <ul class="horizontal-list text-center social-icons">
-            <li>
-              <a href="https://www.linkedin.com/in/ashishkhose7" target="_blank"
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
-            </li>
-            <li>
-              <a href="https://github.com/Ashishkhose7" target="_blank"
-                ><i class="fa-brands fa-github"></i
-              ></a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/ashish__khose" target="_blank"
-                ><i class="fa-brands fa-instagram"></i
-              ></a>
-            </li>
-            <li>
-              <a href="https://www.facebook.com/ashishkhose07" target="_blank"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-            </li>
-          </ul>
+        <div class="relative bg-slate-900 rounded-3xl p-6 sm:p-8 md:p-12 border border-slate-800 reveal from-bottom">
+          <!-- Top accent line -->
+          <div class="absolute -top-px left-20 right-20 h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent" aria-hidden="true"></div>
+
+          <div class="text-base md:text-lg leading-relaxed text-slate-300 text-center md:text-justify space-y-4">
+            <p>
+              Front-end developer specializing in responsive, accessible web experiences for B2B e-commerce and industrial platforms. I translate complex workflows like catalog search, quoting, and dashboards into clear, user-friendly interfaces.
+            </p>
+            <p>
+              Proficient with React, Next.js, Nuxt.js, and modern UI tooling such as Tailwind CSS and Material UI, with a focus on component-driven architecture, performance optimization, and clean, maintainable code. I collaborate closely with product and UX to deliver features end-to-end and continuously improve usability.
+            </p>
+            <p>
+              Partner with marketing and SEO stakeholders to implement technical SEO best practices, improve site discoverability, and translate campaign goals into measurable traffic and engagement gains.
+            </p>
+            <p>
+              I leverage Google Analytics and HubSpot reporting to understand user journeys, track acquisition channels, and guide UX improvements that support growth goals.
+            </p>
+          </div>
+          <div class="mt-6 flex flex-wrap justify-center gap-2 text-xs sm:text-sm font-semibold text-slate-300">
+            <span class="px-3 py-1 rounded-full bg-slate-800/70 border border-slate-700/60">Design Systems</span>
+            <span class="px-3 py-1 rounded-full bg-slate-800/70 border border-slate-700/60">Performance &amp; SEO</span>
+            <span class="px-3 py-1 rounded-full bg-slate-800/70 border border-slate-700/60">Responsive UI</span>
+            <span class="px-3 py-1 rounded-full bg-slate-800/70 border border-slate-700/60">API Integrations</span>
+          </div>
+
+          <!-- Quick Stats -->
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-10 pt-10 border-t border-slate-800">
+            <div class="text-center">
+              <p class="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">2+</p>
+              <p class="text-sm text-slate-400 mt-1">Years Experience</p>
+            </div>
+            <div class="text-center">
+              <p class="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">12+</p>
+              <p class="text-sm text-slate-400 mt-1">Projects</p>
+            </div>
+            <div class="text-center">
+              <p class="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">15+</p>
+              <p class="text-sm text-slate-400 mt-1">Technologies</p>
+            </div>
+            <div class="text-center">
+              <p class="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">3</p>
+              <p class="text-sm text-slate-400 mt-1">Companies</p>
+            </div>
+          </div>
         </div>
       </div>
-    </header>
-    <main>
-      <section id="about">
-        <div id="about-para">
-          <h1 class="section-heading mb75px">
-            <span><i class="fa-solid fa-circle-info"></i></span>
+    </section>
 
-            <span>About </span>
-          </h1>
-
-          <p>
-            A passionate
-
-            <span class="text-highlight">Frontend Developer </span>having 1
-            year of experience in designing, developing and maintaining
-            interactive web and mobile applications with knowledge of HTML, CSS,
-            JavaScript, React, Redux Vue, Vuex, Bootstrap and some other cool
-            libraries and frameworks.
-          </p>
+    <!-- ────────── SKILLS ────────── -->
+    <section id="skills" aria-labelledby="skills-heading" class="py-20 md:py-28 bg-slate-900/50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-16 reveal from-bottom">
+          <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-xs font-semibold tracking-wider uppercase mb-4">
+            <i class="fas fa-chalkboard-teacher" aria-hidden="true"></i> Tech Stack
+          </span>
+          <h2 id="skills-heading" class="text-3xl md:text-4xl font-bold font-display text-white">
+            Skills &amp; Technologies
+          </h2>
         </div>
-      </section>
-      <section id="skills">
-        <h1 class="section-heading mb75px">
-          <span><i class="fas fa-chalkboard-teacher"></i> </span>
 
-          <span>Skills </span>
-        </h1>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-5" role="list" aria-label="Technical skills">
 
-        <div class="skills-display">
-          <div style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap;">
-            <img
-                src="./imgs/react.svg"
-                height="102px"
-                width="102px"
-            />&nbsp;
-            <img
-            src="./imgs/Nextjs.svg"
-            height="100px"
-            width="160px"
-            />&nbsp;
-            <img
-              width="85"
-              height="85"
-              src="./imgs/vuejs.png"
-              alt="vuejs"
-            />&nbsp;
-            <img
-              src="./imgs/html5.png"
-            />&nbsp;<img
-              src="./imgs/css3.png"
-            />&nbsp;
-            <img width="96" height="96" src="./imgs/tailwind_css.png" alt="tailwind_css"/>&nbsp;
-            <img
-              src="./imgs/bootstrap.png"
-            />&nbsp;
-            <img
-              src="./imgs/bootstrapvue.png"
-              height="85px"
-              width="85px"
-            />&nbsp;
-            <img
-              src="./imgs/javascript.png"
-            />&nbsp;
-            <img
-            src="./imgs/material-ui.png"
-            />&nbsp;&nbsp;
-            <img
-            src="./imgs/Antd.png"
-            height="100"
-            width="100"
-            />&nbsp;
-            <img
-            src="./imgs/primevue.webp"
-            height="85px"
-            width="85px"
-            />&nbsp;
-            <img width="96" height="96" src="./imgs/figma.png" alt="figma--v1"/>&nbsp;
-            <img
-            src="./imgs/builderio.jpeg"
-            height="180px"
-            width="180px"
-            />&nbsp;
-            <img
-              src="./imgs/github.png"
-            />&nbsp;
+          <div role="listitem" class="reveal from-scale group flex flex-col items-center gap-3 p-5 rounded-2xl bg-slate-800/70 border border-slate-700/50 hover:border-blue-500/40 hover:shadow-xl hover:shadow-blue-500/5 hover:-translate-y-1 transition-all duration-300 cursor-default" style="transition-delay:.05s">
+            <img src="./imgs/react.svg" class="w-12 h-12 object-contain group-hover:scale-110 transition-transform" alt="React JavaScript library logo" loading="lazy" />
+            <span class="text-xs font-semibold text-slate-300">React</span>
           </div>
+
+          <div role="listitem" class="reveal from-scale group flex flex-col items-center gap-3 p-5 rounded-2xl bg-slate-800/70 border border-slate-700/50 hover:border-blue-500/40 hover:shadow-xl hover:shadow-blue-500/5 hover:-translate-y-1 transition-all duration-300 cursor-default" style="transition-delay:.1s">
+            <img src="./imgs/Nextjs.svg" class="w-14 h-12 object-contain invert group-hover:scale-110 transition-transform" alt="Next.js framework logo" loading="lazy" />
+            <span class="text-xs font-semibold text-slate-300">Next.js</span>
+          </div>
+
+          <div role="listitem" class="reveal from-scale group flex flex-col items-center gap-3 p-5 rounded-2xl bg-slate-800/70 border border-slate-700/50 hover:border-emerald-500/40 hover:shadow-xl hover:shadow-emerald-500/5 hover:-translate-y-1 transition-all duration-300 cursor-default" style="transition-delay:.12s">
+            <img src="./imgs/nuxt.svg" class="w-12 h-12 object-contain group-hover:scale-110 transition-transform" alt="Nuxt.js framework logo" loading="lazy" />
+            <span class="text-xs font-semibold text-slate-300">Nuxt.js</span>
+          </div>
+
+          <div role="listitem" class="reveal from-scale group flex flex-col items-center gap-3 p-5 rounded-2xl bg-slate-800/70 border border-slate-700/50 hover:border-emerald-500/40 hover:shadow-xl hover:shadow-emerald-500/5 hover:-translate-y-1 transition-all duration-300 cursor-default" style="transition-delay:.15s">
+            <img src="./imgs/vuejs.png" class="w-12 h-12 object-contain group-hover:scale-110 transition-transform" alt="Vue.js framework logo" loading="lazy" />
+            <span class="text-xs font-semibold text-slate-300">Vue.js</span>
+          </div>
+
+          <div role="listitem" class="reveal from-scale group flex flex-col items-center gap-3 p-5 rounded-2xl bg-slate-800/70 border border-slate-700/50 hover:border-yellow-500/40 hover:shadow-xl hover:shadow-yellow-500/5 hover:-translate-y-1 transition-all duration-300 cursor-default" style="transition-delay:.2s">
+            <img src="./imgs/javascript.png" class="w-12 h-12 object-contain group-hover:scale-110 transition-transform" alt="JavaScript programming language logo" loading="lazy" />
+            <span class="text-xs font-semibold text-slate-300">JavaScript</span>
+          </div>
+
+          <div role="listitem" class="reveal from-scale group flex flex-col items-center gap-3 p-5 rounded-2xl bg-slate-800/70 border border-slate-700/50 hover:border-orange-500/40 hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1 transition-all duration-300 cursor-default" style="transition-delay:.25s">
+            <img src="./imgs/html5.png" class="w-12 h-12 object-contain group-hover:scale-110 transition-transform" alt="HTML5 markup language logo" loading="lazy" />
+            <span class="text-xs font-semibold text-slate-300">HTML5</span>
+          </div>
+
+          <div role="listitem" class="reveal from-scale group flex flex-col items-center gap-3 p-5 rounded-2xl bg-slate-800/70 border border-slate-700/50 hover:border-blue-500/40 hover:shadow-xl hover:shadow-blue-500/5 hover:-translate-y-1 transition-all duration-300 cursor-default" style="transition-delay:.3s">
+            <img src="./imgs/css3.png" class="w-12 h-12 object-contain group-hover:scale-110 transition-transform" alt="CSS3 stylesheet language logo" loading="lazy" />
+            <span class="text-xs font-semibold text-slate-300">CSS3</span>
+          </div>
+
+          <div role="listitem" class="reveal from-scale group flex flex-col items-center gap-3 p-5 rounded-2xl bg-slate-800/70 border border-slate-700/50 hover:border-cyan-500/40 hover:shadow-xl hover:shadow-cyan-500/5 hover:-translate-y-1 transition-all duration-300 cursor-default" style="transition-delay:.35s">
+            <img src="./imgs/tailwind_css.png" class="w-12 h-12 object-contain group-hover:scale-110 transition-transform" alt="Tailwind CSS framework logo" loading="lazy" />
+            <span class="text-xs font-semibold text-slate-300">Tailwind</span>
+          </div>
+
+          <div role="listitem" class="reveal from-scale group flex flex-col items-center gap-3 p-5 rounded-2xl bg-slate-800/70 border border-slate-700/50 hover:border-purple-500/40 hover:shadow-xl hover:shadow-purple-500/5 hover:-translate-y-1 transition-all duration-300 cursor-default" style="transition-delay:.4s">
+            <img src="./imgs/bootstrap.png" class="w-12 h-12 object-contain group-hover:scale-110 transition-transform" alt="Bootstrap CSS framework logo" loading="lazy" />
+            <span class="text-xs font-semibold text-slate-300">Bootstrap</span>
+          </div>
+
+          <div role="listitem" class="reveal from-scale group flex flex-col items-center gap-3 p-5 rounded-2xl bg-slate-800/70 border border-slate-700/50 hover:border-emerald-500/40 hover:shadow-xl hover:shadow-emerald-500/5 hover:-translate-y-1 transition-all duration-300 cursor-default" style="transition-delay:.45s">
+            <img src="./imgs/bootstrapvue.png" class="w-12 h-12 object-contain group-hover:scale-110 transition-transform" alt="BootstrapVue component library logo" loading="lazy" />
+            <span class="text-xs font-semibold text-slate-300">BootstrapVue</span>
+          </div>
+
+          <div role="listitem" class="reveal from-scale group flex flex-col items-center gap-3 p-5 rounded-2xl bg-slate-800/70 border border-slate-700/50 hover:border-blue-500/40 hover:shadow-xl hover:shadow-blue-500/5 hover:-translate-y-1 transition-all duration-300 cursor-default" style="transition-delay:.5s">
+            <img src="./imgs/material-ui.png" class="w-12 h-12 object-contain group-hover:scale-110 transition-transform" alt="Material UI component library logo" loading="lazy" />
+            <span class="text-xs font-semibold text-slate-300">Material UI</span>
+          </div>
+
+          <div role="listitem" class="reveal from-scale group flex flex-col items-center gap-3 p-5 rounded-2xl bg-slate-800/70 border border-slate-700/50 hover:border-red-500/40 hover:shadow-xl hover:shadow-red-500/5 hover:-translate-y-1 transition-all duration-300 cursor-default" style="transition-delay:.55s">
+            <img src="./imgs/Antd.png" class="w-12 h-12 object-contain group-hover:scale-110 transition-transform" alt="Ant Design component library logo" loading="lazy" />
+            <span class="text-xs font-semibold text-slate-300">Ant Design</span>
+          </div>
+
+          <div role="listitem" class="reveal from-scale group flex flex-col items-center gap-3 p-5 rounded-2xl bg-slate-800/70 border border-slate-700/50 hover:border-teal-500/40 hover:shadow-xl hover:shadow-teal-500/5 hover:-translate-y-1 transition-all duration-300 cursor-default" style="transition-delay:.6s">
+            <img src="./imgs/primevue.webp" class="w-12 h-12 object-contain group-hover:scale-110 transition-transform" alt="PrimeVue component library logo" loading="lazy" />
+            <span class="text-xs font-semibold text-slate-300">PrimeVue</span>
+          </div>
+
+          <div role="listitem" class="reveal from-scale group flex flex-col items-center gap-3 p-5 rounded-2xl bg-slate-800/70 border border-slate-700/50 hover:border-pink-500/40 hover:shadow-xl hover:shadow-pink-500/5 hover:-translate-y-1 transition-all duration-300 cursor-default" style="transition-delay:.65s">
+            <img src="./imgs/figma.png" class="w-12 h-12 object-contain group-hover:scale-110 transition-transform" alt="Figma design tool logo" loading="lazy" />
+            <span class="text-xs font-semibold text-slate-300">Figma</span>
+          </div>
+
+          <div role="listitem" class="reveal from-scale group flex flex-col items-center gap-3 p-5 rounded-2xl bg-slate-800/70 border border-slate-700/50 hover:border-indigo-500/40 hover:shadow-xl hover:shadow-indigo-500/5 hover:-translate-y-1 transition-all duration-300 cursor-default" style="transition-delay:.7s">
+            <img src="./imgs/builderio.jpeg" class="w-12 h-12 object-contain rounded-lg group-hover:scale-110 transition-transform" alt="Builder.io visual CMS logo" loading="lazy" />
+            <span class="text-xs font-semibold text-slate-300">Builder.io</span>
+          </div>
+
+          <div role="listitem" class="reveal from-scale group flex flex-col items-center gap-3 p-5 rounded-2xl bg-slate-800/70 border border-slate-700/50 hover:border-amber-500/40 hover:shadow-xl hover:shadow-amber-500/5 hover:-translate-y-1 transition-all duration-300 cursor-default" style="transition-delay:.75s">
+            <img src="./imgs/google-analytics.svg" class="w-12 h-12 object-contain group-hover:scale-110 transition-transform" alt="Google Analytics logo" loading="lazy" />
+            <span class="text-xs font-semibold text-slate-300">Google Analytics</span>
+          </div>
+
+          <div role="listitem" class="reveal from-scale group flex flex-col items-center gap-3 p-5 rounded-2xl bg-slate-800/70 border border-slate-700/50 hover:border-orange-500/40 hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1 transition-all duration-300 cursor-default" style="transition-delay:.8s">
+            <img src="./imgs/hubspot.svg" class="w-12 h-12 object-contain group-hover:scale-110 transition-transform" alt="HubSpot marketing platform logo" loading="lazy" />
+            <span class="text-xs font-semibold text-slate-300">HubSpot</span>
+          </div>
+
+          <div role="listitem" class="reveal from-scale group flex flex-col items-center gap-3 p-5 rounded-2xl bg-slate-800/70 border border-slate-700/50 hover:border-emerald-500/40 hover:shadow-xl hover:shadow-emerald-500/5 hover:-translate-y-1 transition-all duration-300 cursor-default" style="transition-delay:.85s">
+            <img src="https://img.icons8.com/fluency/48/chatgpt--v2.png" width="48" height="48" class="w-12 h-12 object-contain group-hover:scale-110 transition-transform" alt="ChatGPT logo" loading="lazy" />
+            <span class="text-xs font-semibold text-slate-300">ChatGPT</span>
+          </div>
+
+          <div role="listitem" class="reveal from-scale group flex flex-col items-center gap-3 p-5 rounded-2xl bg-slate-800/70 border border-slate-700/50 hover:border-sky-500/40 hover:shadow-xl hover:shadow-sky-500/5 hover:-translate-y-1 transition-all duration-300 cursor-default" style="transition-delay:.9s">
+            <img src="https://img.icons8.com/fluency/48/microsoft-copilot.png" width="48" height="48" class="w-12 h-12 object-contain group-hover:scale-110 transition-transform" alt="Microsoft Copilot logo" loading="lazy" />
+            <span class="text-xs font-semibold text-slate-300">Microsoft Copilot</span>
+          </div>
+
+          <div role="listitem" class="reveal from-scale group flex flex-col items-center gap-3 p-5 rounded-2xl bg-slate-800/70 border border-slate-700/50 hover:border-amber-500/40 hover:shadow-xl hover:shadow-amber-500/5 hover:-translate-y-1 transition-all duration-300 cursor-default" style="transition-delay:.95s">
+            <img src="https://img.icons8.com/fluency/48/claude.png" width="48" height="48" class="w-12 h-12 object-contain group-hover:scale-110 transition-transform" alt="Claude logo" loading="lazy" />
+            <span class="text-xs font-semibold text-slate-300">Claude</span>
+          </div>
+
+          <div role="listitem" class="reveal from-scale group flex flex-col items-center gap-3 p-5 rounded-2xl bg-slate-800/70 border border-slate-700/50 hover:border-slate-500/40 hover:shadow-xl hover:shadow-slate-500/5 hover:-translate-y-1 transition-all duration-300 cursor-default" style="transition-delay:1s">
+            <img src="./imgs/github.png" class="w-12 h-12 object-contain invert group-hover:scale-110 transition-transform" alt="GitHub version control platform logo" loading="lazy" />
+            <span class="text-xs font-semibold text-slate-300">GitHub</span>
+          </div>
+
         </div>
-      </section>
-      <section id="experience">
-        <h1 class="section-heading mb75px">
-          <span><i class="fas fa-briefcase"></i> </span>
+      </div>
+    </section>
 
-          <span>Work Experience </span>
-        </h1>
+    <!-- ────────── EXPERIENCE ────────── -->
+    <section id="experience" aria-labelledby="experience-heading" class="py-20 md:py-28 bg-slate-950">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-16 reveal from-bottom">
+          <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold tracking-wider uppercase mb-4">
+            <i class="fas fa-briefcase" aria-hidden="true"></i> Career
+          </span>
+          <h2 id="experience-heading" class="text-3xl md:text-4xl font-bold font-display text-white">
+            Work Experience
+          </h2>
+        </div>
 
-        <div class="timeline">
-          <div class="timeline-box">
-            <div class="timeline-container">
-              <div class="timeline-logo">
-                <img
-                  src="./imgs/iodparts.jpeg"
-                />
+        <!-- Timeline (flex-based for perfect dot alignment) -->
+        <ol class="flex flex-col" role="list" aria-label="Work experience timeline">
+
+          <!-- ── Experience 1 ── -->
+          <li class="flex gap-4 sm:gap-6 reveal from-left">
+            <!-- Dot + Line column (always centered) -->
+            <div class="flex flex-col items-center flex-shrink-0 w-8 sm:w-10" aria-hidden="true">
+              <div class="w-5 h-5 rounded-full border-[3px] border-blue-500 bg-slate-950 flex items-center justify-center flex-shrink-0 shadow-lg shadow-blue-500/20">
+                <div class="w-2 h-2 rounded-full bg-blue-500"></div>
               </div>
-              <h3 class="experience-designation m0 m-blue">
-                Frontend Developer
-              </h3>
-              <h4 class="experience-company-name">
-                iodParts Technologies Pvt. Ltd, Pune
-              </h4>
-              <h5 class="experience-duration m0">May 2023 - May 2024</h5>
-
-              <p class="experience-description text-align-justify">
-                Developed and build dynamic UI to support large-scale e-commerce
-                platform. Built and tested application functionalities to ensure
-                a desirable user experience Collaborated with UX teams to create
-                interactive applications and webpages. Adept at identifying
-                opportunities to enhance front-end design and improve the UX.
-              </p>
+              <div class="w-0.5 flex-1 timeline-line-gradient rounded-full"></div>
             </div>
-          </div>
-
-          <div class="timeline-box">
-            <div class="timeline-container">
-              <div class="timeline-logo">
-                <img
-                  src="./imgs/edureka.jpeg"
-                />
+            <!-- Card -->
+            <div class="pb-8 sm:pb-12 flex-1 -mt-1">
+              <div class="bg-slate-900 rounded-2xl p-5 sm:p-6 md:p-8 border border-slate-800 hover:border-slate-700 transition-colors duration-300">
+                <div class="flex items-start gap-3 sm:gap-4 mb-4">
+                  <img src="./imgs/iodparts.jpeg"
+                       class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl object-cover shadow-md flex-shrink-0"
+                       alt="iodParts Technologies company logo" loading="lazy" />
+                  <div class="min-w-0">
+                    <h3 class="text-base sm:text-lg font-bold text-blue-400 leading-tight">Frontend Developer</h3>
+                    <p class="text-orange-400 text-xs sm:text-sm font-medium mt-0.5">iodParts Technologies Pvt. Ltd, Pune</p>
+                    <p class="text-slate-400 text-xs mt-1.5 flex items-center gap-1.5">
+                      <i class="far fa-calendar-alt" aria-hidden="true"></i>
+                      <time datetime="2023-05">May 2023</time> — <span>Present</span>
+                    </p>
+                  </div>
+                </div>
+                <p class="text-sm leading-relaxed text-slate-300">
+                  Building a modern front-end for an industrial spare-parts and automation solutions platform, focused on product discovery, quoting, and order workflows for B2B customers. Partner with product and UX to deliver responsive, accessible interfaces, reusable component systems, and consistent design patterns across the catalog and dashboard experiences. Improve performance, SEO, and conversion through optimized routing, image strategy, and analytics-informed UI refinements.
+                </p>
               </div>
-              <h3 class="experience-designation m0 m-blue">Intern</h3>
-              <h4 class="experience-company-name">
-                Brain4ce Education Solutions Pvt. Ltd <br />(Edureka)
-              </h4>
-              <h5 class="experience-duration m0">Aug 2022 - March 2023</h5>
-
-              <p class="experience-description text-align-justify">
-                Learned MERN stack technology and build food ordering website
-                using Reactjs, Nodejs, Expressjs, Mongodb atlas cloud. Worked
-                alongside with web developers to ensure the right look and vital
-                features were achieved in application. Performed coding,
-                debugging, and unit testing tasks in support of projects. Build
-                various projects like clone of E-commerce front end page and
-                much more during internship.
-              </p>
             </div>
-          </div>
+          </li>
 
-          <div class="timeline-box right">
-            <div class="timeline-container">
-              <div class="timeline-logo">
-                <img src="./imgs/kuka.jpeg" />
+          <!-- ── Experience 2 ── -->
+          <li class="flex gap-4 sm:gap-6 reveal from-left" style="transition-delay:.15s">
+            <div class="flex flex-col items-center flex-shrink-0 w-8 sm:w-10" aria-hidden="true">
+              <div class="w-5 h-5 rounded-full border-[3px] border-purple-500 bg-slate-950 flex items-center justify-center flex-shrink-0 shadow-lg shadow-purple-500/20">
+                <div class="w-2 h-2 rounded-full bg-purple-500"></div>
               </div>
-              <h3 class="experience-designation m0 m-blue">Intern</h3>
-              <h4 class="experience-company-name">KUKA India Pvt. Ltd. Pune</h4>
-              <h5 class="experience-duration m0">Apr 2021 - Oct 2021</h5>
-
-              <p class="experience-description text-align-justify">
-                During my internship majorly i have done robots programming
-                using kuka robot language(KRL). Worked in a team to develop,
-                deploy, and test robots programs with simulation based
-                programming. Installing, operate, calibrate, testing and
-                commissoning robots on site. Troubleshooting of robots and
-                robotics system on site.
-              </p>
+              <div class="w-0.5 flex-1 timeline-line-gradient rounded-full"></div>
             </div>
-          </div>
+            <div class="pb-8 sm:pb-12 flex-1 -mt-1">
+              <div class="bg-slate-900 rounded-2xl p-5 sm:p-6 md:p-8 border border-slate-800 hover:border-slate-700 transition-colors duration-300">
+                <div class="flex items-start gap-3 sm:gap-4 mb-4">
+                  <img src="./imgs/edureka.jpeg"
+                       class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl object-cover shadow-md flex-shrink-0"
+                       alt="Edureka online learning platform logo" loading="lazy" />
+                  <div class="min-w-0">
+                    <h3 class="text-base sm:text-lg font-bold text-blue-400 leading-tight">Intern</h3>
+                    <p class="text-orange-400 text-xs sm:text-sm font-medium mt-0.5">Edureka</p>
+                    <p class="text-slate-400 text-xs mt-1.5 flex items-center gap-1.5">
+                      <i class="far fa-calendar-alt" aria-hidden="true"></i>
+                      <time datetime="2022-08">Aug 2022</time> — <time datetime="2023-03">March 2023</time>
+                    </p>
+                  </div>
+                </div>
+                <p class="text-sm leading-relaxed text-slate-300">
+                  Completed a MERN-focused internship building responsive web apps and API integrations. Developed a full-stack food ordering app with React, Node, Express, and MongoDB Atlas, and delivered e-commerce UI clones to practice production-grade layouts, routing, and state management. Collaborated on code reviews, debugging, and unit testing, improving code quality and delivery speed.
+                </p>
+              </div>
+            </div>
+          </li>
 
-          <div id="timeline-divider"></div>
+          <!-- ── Experience 3 (last – no line) ── -->
+          <li class="flex gap-4 sm:gap-6 reveal from-left" style="transition-delay:.3s">
+            <div class="flex flex-col items-center flex-shrink-0 w-8 sm:w-10" aria-hidden="true">
+              <div class="w-5 h-5 rounded-full border-[3px] border-pink-500 bg-slate-950 flex items-center justify-center flex-shrink-0 shadow-lg shadow-pink-500/20">
+                <div class="w-2 h-2 rounded-full bg-pink-500"></div>
+              </div>
+              <!-- No trailing line for last item -->
+            </div>
+            <div class="flex-1 -mt-1">
+              <div class="bg-slate-900 rounded-2xl p-5 sm:p-6 md:p-8 border border-slate-800 hover:border-slate-700 transition-colors duration-300">
+                <div class="flex items-start gap-3 sm:gap-4 mb-4">
+                  <img src="./imgs/kuka.jpeg"
+                       class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl object-cover shadow-md flex-shrink-0"
+                       alt="KUKA Robotics company logo" loading="lazy" />
+                  <div class="min-w-0">
+                    <h3 class="text-base sm:text-lg font-bold text-blue-400 leading-tight">Intern</h3>
+                    <p class="text-orange-400 text-xs sm:text-sm font-medium mt-0.5">KUKA India Pvt. Ltd, Pune</p>
+                    <p class="text-slate-400 text-xs mt-1.5 flex items-center gap-1.5">
+                      <i class="far fa-calendar-alt" aria-hidden="true"></i>
+                      <time datetime="2021-04">Apr 2021</time> — <time datetime="2021-10">Oct 2021</time>
+                    </p>
+                  </div>
+                </div>
+                <p class="text-sm leading-relaxed text-slate-300">
+                  Programmed industrial robots using KUKA Robot Language (KRL) and simulation-driven workflows to support automation deployments. Assisted with setup, calibration, commissioning, and on-site validation of robotic cells, collaborating with engineers to troubleshoot mechanical and control issues. Documented procedures and optimized sequences to improve cycle time and reliability.
+                </p>
+              </div>
+            </div>
+          </li>
+
+        </ol>
+      </div>
+    </section>
+
+    <!-- ────────── PORTFOLIO ────────── -->
+    <section id="portfolio" aria-labelledby="portfolio-heading" class="py-20 md:py-28 bg-slate-900/50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-16 reveal from-bottom">
+          <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-pink-500/10 border border-pink-500/20 text-pink-400 text-xs font-semibold tracking-wider uppercase mb-4">
+            <i class="fas fa-th-list" aria-hidden="true"></i> Projects
+          </span>
+          <h2 id="portfolio-heading" class="text-3xl md:text-4xl font-bold font-display text-white">
+            Featured Portfolio
+          </h2>
         </div>
-      </section>
-      <section id="portfolio">
-        <h1 class="section-heading mb75px">
-          <span><i class="fas fa-th-list"></i> </span>
 
-          <span>Portfolio </span>
-        </h1>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
 
-        <div id="portfolio-container">
-          <div class="portfolio-image-container">
-            <img src="./imgs/cryprotracker.png" />
-
-            <div class="portfolio-details">
-              <p>
-                <a
-                  href="https://kryptotracker.vercel.app/"
-                  class="project-link"
-                  target="_blank"
-                  >Crypto Tracker <br>Next.js</a
-                >
-              </p>
+          <!-- Project 1 -->
+          <div class="reveal from-bottom portfolio-card group relative overflow-hidden rounded-2xl bg-slate-800 border border-slate-700/50 hover:border-slate-600/50 transition-all duration-500" style="transition-delay:.05s">
+            <div class="overflow-hidden aspect-video">
+              <img src="./imgs/cryprotracker.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Screenshot of Crypto Tracker application showing cryptocurrency prices and charts" loading="lazy" />
+            </div>
+            <div class="portfolio-overlay absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end">
+              <div class="portfolio-overlay-content p-5 sm:p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 w-full">
+                <h3 class="text-white font-bold text-lg">Crypto Tracker</h3>
+                <p class="text-blue-300 text-sm font-medium mt-1">Next.js</p>
+                <a href="https://kryptotracker.vercel.app/" target="_blank" rel="noopener noreferrer"
+                   aria-label="View Crypto Tracker project live"
+                   class="inline-flex items-center gap-1.5 mt-3 text-sm text-white/90 hover:text-white font-medium transition">
+                  View Live <i class="fas fa-external-link-alt text-xs" aria-hidden="true"></i>
+                </a>
+              </div>
             </div>
           </div>
 
-          <div class="portfolio-image-container">
-            <img src="./imgs/food-order-web-app.PNG" />
-
-            <div class="portfolio-details">
-              <p>
-                <a
-                  href="https://app-foodies.netlify.app/"
-                  class="project-link"
-                  target="_blank"
-                  >Food Ordering Web Application <br> React.js</a
-                >
-              </p>
+          <!-- Project 2 -->
+          <div class="reveal from-bottom portfolio-card group relative overflow-hidden rounded-2xl bg-slate-800 border border-slate-700/50 hover:border-slate-600/50 transition-all duration-500" style="transition-delay:.1s">
+            <div class="overflow-hidden aspect-video">
+              <img src="./imgs/food-order-web-app.PNG" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Screenshot of Food Ordering web application with menu items and cart" loading="lazy" />
+            </div>
+            <div class="portfolio-overlay absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end">
+              <div class="portfolio-overlay-content p-5 sm:p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 w-full">
+                <h3 class="text-white font-bold text-lg">Food Ordering App</h3>
+                <p class="text-blue-300 text-sm font-medium mt-1">React.js</p>
+                <a href="https://app-foodies.netlify.app/" target="_blank" rel="noopener noreferrer"
+                   aria-label="View Food Ordering App project live"
+                   class="inline-flex items-center gap-1.5 mt-3 text-sm text-white/90 hover:text-white font-medium transition">
+                  View Live <i class="fas fa-external-link-alt text-xs" aria-hidden="true"></i>
+                </a>
+              </div>
             </div>
           </div>
 
-          <div class="portfolio-image-container">
-            <img src="./imgs/company-dashboard.png" />
-
-            <div class="portfolio-details">
-              <p>
-                <a
-                  href="https://dashboardcompany.vercel.app/"
-                  class="project-link"
-                  target="_blank"
-                  >Company Dashboard <br>Vue.js</a
-                >
-              </p>
+          <!-- Project 3 -->
+          <div class="reveal from-bottom portfolio-card group relative overflow-hidden rounded-2xl bg-slate-800 border border-slate-700/50 hover:border-slate-600/50 transition-all duration-500" style="transition-delay:.15s">
+            <div class="overflow-hidden aspect-video">
+              <img src="./imgs/company-dashboard.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Screenshot of Company Dashboard with analytics charts and data tables" loading="lazy" />
+            </div>
+            <div class="portfolio-overlay absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end">
+              <div class="portfolio-overlay-content p-5 sm:p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 w-full">
+                <h3 class="text-white font-bold text-lg">Company Dashboard</h3>
+                <p class="text-blue-300 text-sm font-medium mt-1">Vue.js</p>
+                <a href="https://dashboardcompany.vercel.app/" target="_blank" rel="noopener noreferrer"
+                   aria-label="View Company Dashboard project live"
+                   class="inline-flex items-center gap-1.5 mt-3 text-sm text-white/90 hover:text-white font-medium transition">
+                  View Live <i class="fas fa-external-link-alt text-xs" aria-hidden="true"></i>
+                </a>
+              </div>
             </div>
           </div>
 
-          <div class="portfolio-image-container">
-            <img src="./imgs/Healthcare_dashboard.PNG" />
-
-            <div class="portfolio-details">
-              <p>
-                <a
-                  href="https://dashboard-health.vercel.app/"
-                  class="project-link"
-                  target="_blank"
-                  >Healthcare Dashboard <br>Vue.js</a
-                >
-              </p>
+          <!-- Project 4 -->
+          <div class="reveal from-bottom portfolio-card group relative overflow-hidden rounded-2xl bg-slate-800 border border-slate-700/50 hover:border-slate-600/50 transition-all duration-500" style="transition-delay:.2s">
+            <div class="overflow-hidden aspect-video">
+              <img src="./imgs/Healthcare_dashboard.PNG" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Screenshot of Healthcare Dashboard with patient statistics and medical data" loading="lazy" />
+            </div>
+            <div class="portfolio-overlay absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end">
+              <div class="portfolio-overlay-content p-5 sm:p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 w-full">
+                <h3 class="text-white font-bold text-lg">Healthcare Dashboard</h3>
+                <p class="text-blue-300 text-sm font-medium mt-1">Vue.js</p>
+                <a href="https://dashboard-health.vercel.app/" target="_blank" rel="noopener noreferrer"
+                   aria-label="View Healthcare Dashboard project live"
+                   class="inline-flex items-center gap-1.5 mt-3 text-sm text-white/90 hover:text-white font-medium transition">
+                  View Live <i class="fas fa-external-link-alt text-xs" aria-hidden="true"></i>
+                </a>
+              </div>
             </div>
           </div>
 
-          <div class="portfolio-image-container">
-            <img src="./imgs/meeting-app.png" />
-
-            <div class="portfolio-details">
-              <p>
-                <a
-                  href="https://meeting-url.netlify.app/"
-                  class="project-link"
-                  target="_blank"
-                  >Meeting Application <br> React.js</a
-                >
-              </p>
+          <!-- Project 5 -->
+          <div class="reveal from-bottom portfolio-card group relative overflow-hidden rounded-2xl bg-slate-800 border border-slate-700/50 hover:border-slate-600/50 transition-all duration-500" style="transition-delay:.25s">
+            <div class="overflow-hidden aspect-video">
+              <img src="./imgs/meeting-app.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Screenshot of Meeting Application with scheduling interface" loading="lazy" />
+            </div>
+            <div class="portfolio-overlay absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end">
+              <div class="portfolio-overlay-content p-5 sm:p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 w-full">
+                <h3 class="text-white font-bold text-lg">Meeting Application</h3>
+                <p class="text-blue-300 text-sm font-medium mt-1">React.js</p>
+                <a href="https://meeting-url.netlify.app/" target="_blank" rel="noopener noreferrer"
+                   aria-label="View Meeting Application project live"
+                   class="inline-flex items-center gap-1.5 mt-3 text-sm text-white/90 hover:text-white font-medium transition">
+                  View Live <i class="fas fa-external-link-alt text-xs" aria-hidden="true"></i>
+                </a>
+              </div>
             </div>
           </div>
 
-          <div class="portfolio-image-container">
-            <img src="./imgs/todo-app.png" />
-
-            <div class="portfolio-details">
-              <p>
-                <a
-                  href="https://todo-app-l2bv.onrender.com/"
-                  class="project-link"
-                  target="_blank"
-                  >TODO App</a
-                >
-              </p>
+          <!-- Project 6 -->
+          <div class="reveal from-bottom portfolio-card group relative overflow-hidden rounded-2xl bg-slate-800 border border-slate-700/50 hover:border-slate-600/50 transition-all duration-500" style="transition-delay:.3s">
+            <div class="overflow-hidden aspect-video">
+              <img src="./imgs/todo-app.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Screenshot of TODO App with task list and completion status" loading="lazy" />
+            </div>
+            <div class="portfolio-overlay absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end">
+              <div class="portfolio-overlay-content p-5 sm:p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 w-full">
+                <h3 class="text-white font-bold text-lg">TODO App</h3>
+                <p class="text-blue-300 text-sm font-medium mt-1">Full Stack</p>
+                <a href="https://todo-app-l2bv.onrender.com/" target="_blank" rel="noopener noreferrer"
+                   aria-label="View TODO App project live"
+                   class="inline-flex items-center gap-1.5 mt-3 text-sm text-white/90 hover:text-white font-medium transition">
+                  View Live <i class="fas fa-external-link-alt text-xs" aria-hidden="true"></i>
+                </a>
+              </div>
             </div>
           </div>
 
-          <div class="portfolio-image-container">
-            <img src="./imgs/blog-app.png" />
-
-            <div class="portfolio-details">
-              <p>
-                <a
-                  href="https://blogingapp.netlify.app/"
-                  class="project-link"
-                  target="_blank"
-                  >Blog App <br>React.js</a
-                >
-              </p>
+          <!-- Project 7 -->
+          <div class="reveal from-bottom portfolio-card group relative overflow-hidden rounded-2xl bg-slate-800 border border-slate-700/50 hover:border-slate-600/50 transition-all duration-500" style="transition-delay:.35s">
+            <div class="overflow-hidden aspect-video">
+              <img src="./imgs/blog-app.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Screenshot of Blog App with article listings and featured posts" loading="lazy" />
+            </div>
+            <div class="portfolio-overlay absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end">
+              <div class="portfolio-overlay-content p-5 sm:p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 w-full">
+                <h3 class="text-white font-bold text-lg">Blog App</h3>
+                <p class="text-blue-300 text-sm font-medium mt-1">React.js</p>
+                <a href="https://blogingapp.netlify.app/" target="_blank" rel="noopener noreferrer"
+                   aria-label="View Blog App project live"
+                   class="inline-flex items-center gap-1.5 mt-3 text-sm text-white/90 hover:text-white font-medium transition">
+                  View Live <i class="fas fa-external-link-alt text-xs" aria-hidden="true"></i>
+                </a>
+              </div>
             </div>
           </div>
 
-          <div class="portfolio-image-container">
-            <img src="./imgs/ecom-app.png" />
-
-            <div class="portfolio-details">
-              <p>
-                <a
-                  href="https://ecomm-ui-clone.netlify.app/"
-                  class="project-link"
-                  target="_blank"
-                  >E-commerce front <br />end project</a
-                >
-              </p>
+          <!-- Project 8 -->
+          <div class="reveal from-bottom portfolio-card group relative overflow-hidden rounded-2xl bg-slate-800 border border-slate-700/50 hover:border-slate-600/50 transition-all duration-500" style="transition-delay:.4s">
+            <div class="overflow-hidden aspect-video">
+              <img src="./imgs/ecom-app.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Screenshot of E-commerce frontend with product listings and shopping cart" loading="lazy" />
+            </div>
+            <div class="portfolio-overlay absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end">
+              <div class="portfolio-overlay-content p-5 sm:p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 w-full">
+                <h3 class="text-white font-bold text-lg">E-commerce Frontend</h3>
+                <p class="text-blue-300 text-sm font-medium mt-1">HTML / CSS / JS</p>
+                <a href="https://ecomm-ui-clone.netlify.app/" target="_blank" rel="noopener noreferrer"
+                   aria-label="View E-commerce Frontend project live"
+                   class="inline-flex items-center gap-1.5 mt-3 text-sm text-white/90 hover:text-white font-medium transition">
+                  View Live <i class="fas fa-external-link-alt text-xs" aria-hidden="true"></i>
+                </a>
+              </div>
             </div>
           </div>
 
-          <div class="portfolio-image-container">
-            <img src="./imgs/calculator-app.png" />
-
-            <div class="portfolio-details">
-              <p>
-                <a
-                  href="https://calculator-app-clone.netlify.app/"
-                  class="project-link"
-                  target="_blank"
-                  >Calculator App</a
-                >
-              </p>
+          <!-- Project 9 -->
+          <div class="reveal from-bottom portfolio-card group relative overflow-hidden rounded-2xl bg-slate-800 border border-slate-700/50 hover:border-slate-600/50 transition-all duration-500" style="transition-delay:.45s">
+            <div class="overflow-hidden aspect-video">
+              <img src="./imgs/calculator-app.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Screenshot of Calculator App with numeric keypad and display" loading="lazy" />
+            </div>
+            <div class="portfolio-overlay absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end">
+              <div class="portfolio-overlay-content p-5 sm:p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 w-full">
+                <h3 class="text-white font-bold text-lg">Calculator App</h3>
+                <p class="text-blue-300 text-sm font-medium mt-1">JavaScript</p>
+                <a href="https://calculator-app-clone.netlify.app/" target="_blank" rel="noopener noreferrer"
+                   aria-label="View Calculator App project live"
+                   class="inline-flex items-center gap-1.5 mt-3 text-sm text-white/90 hover:text-white font-medium transition">
+                  View Live <i class="fas fa-external-link-alt text-xs" aria-hidden="true"></i>
+                </a>
+              </div>
             </div>
           </div>
 
-          <div class="portfolio-image-container">
-            <img src="./imgs/youtube-clone-app.png" />
-
-            <div class="portfolio-details">
-              <p>
-                <a
-                  href="https://youtubeui-app.netlify.app/"
-                  class="project-link"
-                  target="_blank"
-                  >Youtube clone</a
-                >
-              </p>
+          <!-- Project 10 -->
+          <div class="reveal from-bottom portfolio-card group relative overflow-hidden rounded-2xl bg-slate-800 border border-slate-700/50 hover:border-slate-600/50 transition-all duration-500" style="transition-delay:.5s">
+            <div class="overflow-hidden aspect-video">
+              <img src="./imgs/youtube-clone-app.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Screenshot of YouTube clone with video thumbnails and navigation" loading="lazy" />
+            </div>
+            <div class="portfolio-overlay absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end">
+              <div class="portfolio-overlay-content p-5 sm:p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 w-full">
+                <h3 class="text-white font-bold text-lg">YouTube Clone</h3>
+                <p class="text-blue-300 text-sm font-medium mt-1">HTML / CSS</p>
+                <a href="https://youtubeui-app.netlify.app/" target="_blank" rel="noopener noreferrer"
+                   aria-label="View YouTube Clone project live"
+                   class="inline-flex items-center gap-1.5 mt-3 text-sm text-white/90 hover:text-white font-medium transition">
+                  View Live <i class="fas fa-external-link-alt text-xs" aria-hidden="true"></i>
+                </a>
+              </div>
             </div>
           </div>
 
-          <div class="portfolio-image-container">
-            <img src="./imgs/chegg-clone.png" />
-
-            <div class="portfolio-details">
-              <p>
-                <a
-                  href="https://clone-chegg.netlify.app/"
-                  class="project-link"
-                  target="_blank"
-                  >Chegg.com clone</a
-                >
-              </p>
+          <!-- Project 11 -->
+          <div class="reveal from-bottom portfolio-card group relative overflow-hidden rounded-2xl bg-slate-800 border border-slate-700/50 hover:border-slate-600/50 transition-all duration-500" style="transition-delay:.55s">
+            <div class="overflow-hidden aspect-video">
+              <img src="./imgs/chegg-clone.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Screenshot of Chegg.com clone with study resources interface" loading="lazy" />
+            </div>
+            <div class="portfolio-overlay absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end">
+              <div class="portfolio-overlay-content p-5 sm:p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 w-full">
+                <h3 class="text-white font-bold text-lg">Chegg.com Clone</h3>
+                <p class="text-blue-300 text-sm font-medium mt-1">HTML / CSS</p>
+                <a href="https://clone-chegg.netlify.app/" target="_blank" rel="noopener noreferrer"
+                   aria-label="View Chegg.com Clone project live"
+                   class="inline-flex items-center gap-1.5 mt-3 text-sm text-white/90 hover:text-white font-medium transition">
+                  View Live <i class="fas fa-external-link-alt text-xs" aria-hidden="true"></i>
+                </a>
+              </div>
             </div>
           </div>
 
-          <div class="portfolio-image-container">
-            <img src="./imgs/Thumbnail.jpg" />
-
-            <div class="portfolio-details">
-              <p>
-                <a
-                  href="https://www.figma.com/proto/VAs0FaV6WY3dPjJgbN5012/Shopping-App?node-id=1-173&node-type=CANVAS&t=bhRng9jyVeE0UmuC-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A171"
-                  class="project-link"
-                  target="_blank"
-                  >Figma Design</a
-                >
-              </p>
+          <!-- Project 12 -->
+          <div class="reveal from-bottom portfolio-card group relative overflow-hidden rounded-2xl bg-slate-800 border border-slate-700/50 hover:border-slate-600/50 transition-all duration-500" style="transition-delay:.6s">
+            <div class="overflow-hidden aspect-video">
+              <img src="./imgs/Thumbnail.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Thumbnail of Shopping App design prototype created in Figma" loading="lazy" />
+            </div>
+            <div class="portfolio-overlay absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end">
+              <div class="portfolio-overlay-content p-5 sm:p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 w-full">
+                <h3 class="text-white font-bold text-lg">Shopping App Design</h3>
+                <p class="text-blue-300 text-sm font-medium mt-1">Figma</p>
+                <a href="https://www.figma.com/proto/VAs0FaV6WY3dPjJgbN5012/Shopping-App?node-id=1-173&node-type=CANVAS&t=bhRng9jyVeE0UmuC-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A171" target="_blank" rel="noopener noreferrer"
+                   aria-label="View Shopping App Figma design prototype"
+                   class="inline-flex items-center gap-1.5 mt-3 text-sm text-white/90 hover:text-white font-medium transition">
+                  View Live <i class="fas fa-external-link-alt text-xs" aria-hidden="true"></i>
+                </a>
+              </div>
             </div>
           </div>
+
         </div>
-      </section>
-      <section id="contact">
-        <h1 class="section-heading mb50px">
-          <span><i class="far fa-address-card"></i> </span>
+      </div>
+    </section>
 
-          <span>Contact </span>
-        </h1>
+    <!-- ────────── CONTACT ────────── -->
+    <section id="contact" aria-labelledby="contact-heading" class="relative py-20 md:py-28 overflow-hidden">
+      <!-- Background -->
+      <div class="absolute inset-0 bg-gradient-to-br from-slate-950 via-blue-950/80 to-purple-950/60" aria-hidden="true"></div>
+      <div class="absolute inset-0 dot-grid text-white/[0.03]" aria-hidden="true"></div>
+      <div class="absolute top-0 right-0 w-80 h-80 md:w-96 md:h-96 bg-blue-500/10 rounded-full blur-3xl" aria-hidden="true"></div>
+      <div class="absolute bottom-0 left-0 w-80 h-80 md:w-96 md:h-96 bg-purple-500/10 rounded-full blur-3xl" aria-hidden="true"></div>
 
-        <div id="contact-container">
-          <div id="contact-form-container">
-            <form id="contact-form">
-              <input id="input-name" name="name" placeholder="Your Name" />
-              <input
-                id="input-email"
-                name="input-email"
-                required
-                placeholder="Your Email"
-              />
-              <textarea
-                id="input-message"
-                name="input-message"
-                rows="2"
-                cols="40"
-                placeholder="Message"
-              >
-              </textarea>
-              <button class="sub-btn" type="submit">SEND MESSAGE</button>
+      <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-16 reveal from-bottom">
+          <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/10 text-blue-300 text-xs font-semibold tracking-wider uppercase mb-4">
+            <i class="far fa-address-card" aria-hidden="true"></i> Get In Touch
+          </span>
+          <h2 id="contact-heading" class="text-3xl md:text-4xl font-bold font-display text-white">
+            Contact Me
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-10 md:gap-16">
+          <!-- Info Column -->
+          <div class="reveal from-left order-2 md:order-1">
+            <h3 class="text-xl font-bold text-white mb-4">Let's work together</h3>
+            <p class="text-slate-300 text-sm leading-relaxed mb-8">
+              Feel free to talk to me about anything that bothers you. If you need a helping hand, please don't hesitate to contact me. Got a question on the services that I provide? I am just a click away.
+            </p>
+
+            <address class="not-italic space-y-5">
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0" aria-hidden="true">
+                  <i class="fas fa-map-marker-alt text-blue-400"></i>
+                </div>
+                <div>
+                  <p class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Location</p>
+                  <p class="text-white font-medium text-sm">Maharashtra, India</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0" aria-hidden="true">
+                  <i class="fas fa-mobile-alt text-purple-400"></i>
+                </div>
+                <div>
+                  <p class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Phone</p>
+                  <a href="tel:+917066942811" class="text-white font-medium text-sm hover:text-blue-400 transition">7066942811</a>
+                </div>
+              </div>
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0" aria-hidden="true">
+                  <i class="far fa-envelope text-pink-400"></i>
+                </div>
+                <div>
+                  <p class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Email</p>
+                  <a href="mailto:khoseashish7@gmail.com" class="text-white font-medium text-sm hover:text-blue-400 transition">khoseashish7@gmail.com</a>
+                </div>
+              </div>
+            </address>
+          </div>
+
+          <!-- Form Column -->
+          <div class="reveal from-right order-1 md:order-2">
+            <form id="contact-form" aria-label="Contact form" action="https://formsubmit.co/1b6a0355fb256cbe7c29ee4787730f59" method="POST" class="space-y-5">
+              <input type="hidden" name="_subject" value="New portfolio message" />
+              <input type="hidden" name="_captcha" value="false" />
+              <div>
+                <label for="contact-name" class="sr-only">Your Name</label>
+                <input type="text" id="contact-name" name="name"
+                       aria-label="Your name"
+                       placeholder="Your Name"
+                       autocomplete="name"
+                       class="w-full px-5 py-3.5 rounded-xl bg-white/10 border border-white/10 text-white placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/60 focus:border-blue-500/40 transition" />
+              </div>
+              <div>
+                <label for="contact-email" class="sr-only">Your Email (required)</label>
+                <input type="email" id="contact-email" name="email"
+                       aria-label="Your email address"
+                       aria-required="true"
+                       required
+                       placeholder="Your Email *"
+                       autocomplete="email"
+                       class="w-full px-5 py-3.5 rounded-xl bg-white/10 border border-white/10 text-white placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/60 focus:border-blue-500/40 transition" />
+              </div>
+              <div>
+                <label for="contact-message" class="sr-only">Your Message</label>
+                <textarea id="contact-message" name="message"
+                          aria-label="Your message"
+                          rows="4"
+                          placeholder="Your Message"
+                          class="w-full px-5 py-3.5 rounded-xl bg-white/10 border border-white/10 text-white placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/60 focus:border-blue-500/40 transition resize-none"></textarea>
+              </div>
+              <button type="submit"
+                      class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold text-sm shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/35 hover:-translate-y-0.5 transition-all duration-300 focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-slate-950">
+                Send Message <i class="fas fa-paper-plane text-xs" aria-hidden="true"></i>
+              </button>
             </form>
           </div>
-
-          <div id="my-details-container">
-            <h3>Get In touch</h3>
-
-            <p>
-              Feel free to talk to me about anything that bothers you. If you
-              need a helping hand, please don't hesitate to contact me. Got a
-              question on the services that I provide? I am just a click away.
-            </p>
-            <h3>My Address</h3>
-
-            <div class="my-details-info-container">
-              <i class="fas fa-map-marker-alt"></i>
-
-              <span>Maharashtra, India </span>
-            </div>
-
-            <div class="my-details-info-container">
-              <i class="fas fa-mobile-alt"></i>
-
-              <span>7066942811 </span>
-            </div>
-
-            <div class="my-details-info-container">
-              <i class="far fa-envelope"></i>
-
-              <span>khoseashish7@gmail.com </span>
-            </div>
-          </div>
         </div>
 
-        <div class="text-center social-icons">
-          <ul class="horizontal-list">
-            <li>
-              <a href="https://www.linkedin.com/in/ashishkhose7" target="_blank"
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
-            </li>
-            <li>
-              <a href="https://github.com/Ashishkhose7" target="_blank"
-                ><i class="fa-brands fa-github"></i
-              ></a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/ashish__khose" target="_blank"
-                ><i class="fa-brands fa-instagram"></i
-              ></a>
-            </li>
-            <li>
-              <a href="https://www.facebook.com/ashishkhose07" target="_blank"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-            </li>
-          </ul>
+        <!-- Social Row -->
+        <div class="flex justify-center gap-3 sm:gap-4 mt-16 pt-10 border-t border-white/10 reveal from-bottom">
+          <a href="https://www.linkedin.com/in/ashishkhose7" target="_blank" rel="noopener noreferrer"
+             aria-label="Visit LinkedIn profile"
+             class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-slate-300 hover:bg-blue-600 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-blue-600/25">
+            <i class="fab fa-linkedin-in text-lg" aria-hidden="true"></i>
+          </a>
+          <a href="https://github.com/Ashishkhose7" target="_blank" rel="noopener noreferrer"
+             aria-label="Visit GitHub profile"
+             class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-slate-300 hover:bg-white hover:text-slate-900 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-white/10">
+            <i class="fa-brands fa-github text-lg" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.instagram.com/ashish__khose" target="_blank" rel="noopener noreferrer"
+             aria-label="Visit Instagram profile"
+             class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-slate-300 hover:bg-gradient-to-br hover:from-purple-500 hover:to-pink-500 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-pink-500/25">
+            <i class="fa-brands fa-instagram text-lg" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.facebook.com/ashishkhose07" target="_blank" rel="noopener noreferrer"
+             aria-label="Visit Facebook profile"
+             class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-slate-300 hover:bg-blue-700 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-blue-700/25">
+            <i class="fab fa-facebook-f text-lg" aria-hidden="true"></i>
+          </a>
         </div>
-      </section>
-    </main>
-  </body>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="bg-slate-950 border-t border-slate-800/50 py-8" role="contentinfo">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+      <p class="text-sm text-slate-500">
+        &copy; <span id="copyright-year"></span> Ashish Khose. Crafted with
+        <i class="fas fa-heart text-red-500 text-xs" aria-label="love"></i>
+        &amp; code.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top"
+          class="fixed bottom-5 right-5 sm:bottom-6 sm:right-6 w-12 h-12 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg shadow-blue-500/25 flex items-center justify-center opacity-0 translate-y-4 pointer-events-none transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 z-50"
+          aria-label="Scroll back to top">
+    <i class="fas fa-arrow-up text-sm" aria-hidden="true"></i>
+  </button>
+
+  <!-- ═══════════════ SCRIPTS ═══════════════ -->
+  <script>
+    /* ── Copyright Year ────────────────────────── */
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
+    /* ── Mobile Menu ───────────────────────────── */
+    const menuBtn    = document.getElementById('menu-btn');
+    const menuIcon   = document.getElementById('menu-icon');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      menuIcon.classList.toggle('fa-bars');
+      menuIcon.classList.toggle('fa-xmark');
+      menuBtn.setAttribute('aria-expanded', String(!isOpen));
+    });
+
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuIcon.classList.add('fa-bars');
+        menuIcon.classList.remove('fa-xmark');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    /* ── Navbar Scroll Effect ──────────────────── */
+    const navbar = document.getElementById('navbar');
+    const navClasses = ['bg-slate-950/85', 'backdrop-blur-xl', 'shadow-lg', 'shadow-slate-900/50', 'border-slate-800/50'];
+
+    function handleNavScroll() {
+      if (window.scrollY > 60) {
+        navbar.classList.add(...navClasses);
+      } else {
+        navbar.classList.remove(...navClasses);
+      }
+    }
+    window.addEventListener('scroll', handleNavScroll, { passive: true });
+    handleNavScroll();
+
+    /* ── Back to Top ───────────────────────────── */
+    const backToTop = document.getElementById('back-to-top');
+
+    function handleBackToTop() {
+      if (window.scrollY > 500) {
+        backToTop.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
+        backToTop.classList.add('opacity-100', 'translate-y-0', 'pointer-events-auto');
+      } else {
+        backToTop.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
+        backToTop.classList.remove('opacity-100', 'translate-y-0', 'pointer-events-auto');
+      }
+    }
+    window.addEventListener('scroll', handleBackToTop, { passive: true });
+    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    /* ── Scroll Reveal (Intersection Observer) ── */
+    const revealEls = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+
+    revealEls.forEach(el => revealObserver.observe(el));
+
+    /* ── Typing Effect ─────────────────────────── */
+    const phrases = ['Frontend Developer', 'React.js Developer', 'Vue.js Developer', 'UI/UX Enthusiast', 'Next.js Developer'];
+    let phraseIdx = 0, charIdx = 0, deleting = false;
+    const typedEl  = document.getElementById('typed-text');
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function type() {
+      const current = phrases[phraseIdx];
+      typedEl.textContent = current.substring(0, charIdx);
+
+      if (!deleting && charIdx < current.length) {
+        charIdx++;
+        setTimeout(type, 85);
+      } else if (!deleting && charIdx === current.length) {
+        setTimeout(() => { deleting = true; type(); }, 2200);
+      } else if (deleting && charIdx > 0) {
+        charIdx--;
+        setTimeout(type, 40);
+      } else {
+        deleting = false;
+        phraseIdx = (phraseIdx + 1) % phrases.length;
+        setTimeout(type, 500);
+      }
+    }
+
+    if (prefersReducedMotion) {
+      typedEl.textContent = phrases[0];
+    } else {
+      type();
+    }
+
+    /* ── Active Nav Highlight ──────────────────── */
+    const sections = document.querySelectorAll('section, header');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    function handleActiveNav() {
+      let current = 'hero';
+      sections.forEach(sec => {
+        if (window.scrollY >= sec.offsetTop - 200) {
+          current = sec.getAttribute('id');
+        }
+      });
+      navLinks.forEach(link => {
+        link.classList.remove('active', 'text-blue-400');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active', 'text-blue-400');
+        }
+      });
+    }
+    window.addEventListener('scroll', handleActiveNav, { passive: true });
+    handleActiveNav();
+
+  </script>
+</body>
 </html>
